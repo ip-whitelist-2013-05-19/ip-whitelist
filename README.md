@@ -6,4 +6,4 @@ ip\_whitelist
 Status
 ------
 
-Developer version
+Beta version

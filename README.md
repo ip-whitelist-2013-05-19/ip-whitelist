@@ -1,7 +1,7 @@
 ip\_whitelist
 =============
 
-``ip_whitelist`` is additional protection for websites on ``Apache_HTTP_SERVER+PHP`` stack
+``ip_whitelist`` is additional protection for websites on ``Apache_HTTP_Server+PHP`` stack
 
 Status
 ------

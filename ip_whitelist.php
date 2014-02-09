@@ -133,7 +133,7 @@ function ip_whitelist__unlock (&$ctx, $lock) {
 }
 
 function ip_whitelist__atomic_write (&$ctx, $path, $data) {
-    $new_path = $path.'.new';
+    $new_path = $path.'.new-'.getmypid();
     file_put_contents($new_path, $data);
     rename($new_path, $path);
 }

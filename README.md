@@ -6,4 +6,4 @@ ip\_whitelist
 Status
 ------
 
-Developer version (git master).
+Beta version (0.2).

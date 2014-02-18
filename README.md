@@ -6,4 +6,4 @@ ip\_whitelist
 Status
 ------
 
-Developer version (for master branch).
+Developer version (git master).

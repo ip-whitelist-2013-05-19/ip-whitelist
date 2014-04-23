@@ -7,4 +7,4 @@ ip\_whitelist
 Status
 ------
 
-Developer version (git master branch).
+Beta release ip_whitelist-0.3.1 .

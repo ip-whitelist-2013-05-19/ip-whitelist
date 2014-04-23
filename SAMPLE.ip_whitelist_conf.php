@@ -3,7 +3,7 @@
 
 function ip_whitelist__conf__get_conf () {
     return array(
-            'allow_user_list' => array(
+            'allowed_user_list' => array(
                     // examples:
                     //
                     //'user-1@example.org',

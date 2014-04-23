@@ -69,8 +69,8 @@ function ip_whitelist__init_ctx (&$ctx) {
         throw new Exception('!is_array($ctx[\'conf\'])');
     }
     
-    if (!is_array($ctx['conf']['allow_user_list'])) {
-        throw new Exception('!is_array($ctx[\'conf\'][\'allow_user_list\'])');
+    if (!is_array($ctx['conf']['allowed_user_list'])) {
+        throw new Exception('!is_array($ctx[\'conf\'][\'allowed_user_list\'])');
     }
     
     if (!is_array($ctx['conf']['protected_dir_list'])) {
@@ -118,7 +118,7 @@ function ip_whitelist__check_auth (&$ctx, $assertion) {
     
     $email = array_key_exists('email', $verify_result) ? $verify_result['email'] : NULL;
     
-    if (!$email || !in_array($email, $ctx['conf']['allow_user_list'])) {
+    if (!$email || !in_array($email, $ctx['conf']['allowed_user_list'])) {
         return NULL;
     }
     
@@ -168,7 +168,7 @@ function ip_whitelist__write_state (&$ctx, $protected_dir, &$state) {
 
 function ip_whitelist__filter_state (&$ctx, &$state) {
     foreach ($state as $state_email => $state_ip) {
-        if (!in_array($state_email, $ctx['conf']['allow_user_list'])) {
+        if (!in_array($state_email, $ctx['conf']['allowed_user_list'])) {
             unset($state[$state_email]);
         }
     }

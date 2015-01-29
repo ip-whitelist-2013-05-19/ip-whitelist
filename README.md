@@ -7,4 +7,4 @@ ip\_whitelist
 Status
 ------
 
-Beta release ip_whitelist-0.3.1 .
+Release: ip_whitelist-0.3.2 .

@@ -1,7 +1,7 @@
 <?php
 // -*- mode: php; coding: utf-8 -*-
 //
-// Copyright 2013, 2014 Andrej A Antonov <polymorphm@gmail.com>
+// Copyright (c) 2013, 2014, 2015 Andrej Antonov <polymorphm@gmail.com>
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -92,6 +92,7 @@ function ip_whitelist__check_auth (&$ctx, $assertion) {
     curl_setopt_array(
             $curl,
                     array(
+                            CURLOPT_TIMEOUT => 20,
                             CURLOPT_URL => 'https://verifier.login.persona.org/verify',
                             CURLOPT_RETURNTRANSFER => TRUE,
                             CURLOPT_POST => TRUE,
